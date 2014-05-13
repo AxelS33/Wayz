@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Mapping
+namespace Services
 {
-    class Player : User
+    public class Services
     {
-        private int score { get; set; }
-        
     }
 }

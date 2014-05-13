@@ -8,5 +8,6 @@ namespace BusinessLayer.Mapping
 {
     class Admin : User
     {
+        private string passWord { get; set; }
     }
 }

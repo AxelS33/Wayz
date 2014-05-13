@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Mapping
 {
-    abstract class abstractBC : IDAC
+    abstract class abstractBC
     {
+
     }
 }

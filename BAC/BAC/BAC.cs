@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Mapping
+namespace BAC
 {
-    class Player : User
+    public class BAC : Ibac
     {
-        private int score { get; set; }
-        
     }
 }
