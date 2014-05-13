@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServicesDll
+namespace BAC
 {
-    public class Class1
+    interface Ibac
     {
+        
     }
 }

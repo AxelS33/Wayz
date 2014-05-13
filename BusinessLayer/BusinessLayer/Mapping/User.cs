@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Mapping
 {
-    class User
+    public abstract class User
     {
+        protected int id { get; set; }
+        protected string pseudo{ get; set;}
+
+        
     }
 }

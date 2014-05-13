@@ -8,5 +8,8 @@ namespace BusinessLayer.Mapping
 {
     class Questionnary
     {
+        private List<Question> listQuestion;
+        private string typeQuestionnaire;
+        
     }
 }

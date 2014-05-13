@@ -8,7 +8,7 @@ namespace DAL
 {
     interface IDAL
     {
-        public System.Data.DataSet getRows(string sqlQuery, string rowsName);
-        public void actionsRows(string sqlQuery);
+         System.Data.DataSet getRows(string sqlQuery, string rowsName);
+         void actionsRows(string sqlQuery);
     }
 }
