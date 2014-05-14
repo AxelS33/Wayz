@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{41FF9AAA-8E14-4B45-9CA6-5B8A7C9C56FA}" Label="" LastModificationDate="1400055932" Name="Données conceptuelles_1" Objects="72" Symbols="19" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" signature="CDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{41FF9AAA-8E14-4B45-9CA6-5B8A7C9C56FA}" Label="" LastModificationDate="1399990702" Name="Données conceptuelles_1" Objects="72" Symbols="19" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" signature="CDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1173,7 +1173,7 @@ Shadow=0</a:DisplayPreferences>
 <o:AssociationLinkSymbol Id="o5">
 <a:CreationDate>1399964004</a:CreationDate>
 <a:ModificationDate>1399967079</a:ModificationDate>
-<a:Rect>((27080,3229), (28940,17480))</a:Rect>
+<a:Rect>((27139,3229), (28850,17480))</a:Rect>
 <a:ListOfPoints>((27170,17480),(27170,11209),(27139,11209),(27139,3229))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -1215,7 +1215,7 @@ CARD 0 Arial,8,N</a:FontList>
 <o:AssociationLinkSymbol Id="o12">
 <a:CreationDate>1399964734</a:CreationDate>
 <a:ModificationDate>1399967059</a:ModificationDate>
-<a:Rect>((-12585,331), (-10725,15722))</a:Rect>
+<a:Rect>((-12520,331), (-10726,15722))</a:Rect>
 <a:ListOfPoints>((-12495,15722),(-12495,7290),(-12520,7290),(-12520,331))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -1278,7 +1278,7 @@ CARD 0 Arial,8,N</a:FontList>
 <o:AssociationLinkSymbol Id="o22">
 <a:CreationDate>1399964936</a:CreationDate>
 <a:ModificationDate>1399967050</a:ModificationDate>
-<a:Rect>((3989,2633), (5859,10520))</a:Rect>
+<a:Rect>((3990,2633), (5859,10520))</a:Rect>
 <a:ListOfPoints>((5759,2633),(5759,10520))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -2011,7 +2011,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>IDPROFESSION</a:Code>
 <a:CreationDate>1399963149</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1400055932</a:ModificationDate>
+<a:ModificationDate>1399964080</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:DataType>I</a:DataType>
 </o:DataItem>
@@ -2061,7 +2061,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>IDFEATURE</a:Code>
 <a:CreationDate>1399963612</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1400055932</a:ModificationDate>
+<a:ModificationDate>1399964080</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:DataType>I</a:DataType>
 </o:DataItem>
@@ -2183,10 +2183,32 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>FEATUREWEIGHT</a:Code>
 <a:CreationDate>1399964004</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1400055932</a:ModificationDate>
+<a:ModificationDate>1399964725</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <c:Attributes>
 <o:AssociationAttribute Id="o89">
+<a:ObjectID>084EE142-15AE-40BA-A0A2-AE86C2011821</a:ObjectID>
+<a:CreationDate>1399964009</a:CreationDate>
+<a:Creator>utilisateur</a:Creator>
+<a:ModificationDate>1399964080</a:ModificationDate>
+<a:Modifier>utilisateur</a:Modifier>
+<a:BaseAttribute.Mandatory>1</a:BaseAttribute.Mandatory>
+<c:DataItem>
+<o:DataItem Ref="o66"/>
+</c:DataItem>
+</o:AssociationAttribute>
+<o:AssociationAttribute Id="o90">
+<a:ObjectID>97B5A84C-3C97-43B3-B21A-9E1E1AE059B5</a:ObjectID>
+<a:CreationDate>1399964009</a:CreationDate>
+<a:Creator>utilisateur</a:Creator>
+<a:ModificationDate>1399964080</a:ModificationDate>
+<a:Modifier>utilisateur</a:Modifier>
+<a:BaseAttribute.Mandatory>1</a:BaseAttribute.Mandatory>
+<c:DataItem>
+<o:DataItem Ref="o71"/>
+</c:DataItem>
+</o:AssociationAttribute>
+<o:AssociationAttribute Id="o91">
 <a:ObjectID>784E7555-883A-493C-84D7-E3D5A11A9AD6</a:ObjectID>
 <a:CreationDate>1399964009</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
@@ -2342,11 +2364,10 @@ LABL 0 Arial,8,N</a:FontList>
 </o:AssociationLink>
 </c:AssociationsLinks>
 <c:TargetModels>
-<o:TargetModel Id="o90">
+<o:TargetModel Id="o92">
 <a:ObjectID>6395FE6A-5D0C-4B29-821A-F03BF10A3507</a:ObjectID>
 <a:Name>Données conceptuelles_1</a:Name>
 <a:Code>DONNEES_CONCEPTUELLES_1</a:Code>
-<a:ExtractionID>3997800</a:ExtractionID>
 <a:CreationDate>1399986209</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
 <a:ModificationDate>1399990702</a:ModificationDate>
