@@ -17,12 +17,9 @@ namespace BusinessLayer.Mapping
                 return profile;
             }
 
-<<<<<<< HEAD
-=======
             public void lancerService()
             {
             }
->>>>>>> 6569d5e954a4e084669c5d460b3e24ec0e204c13
             
             public void weightProfileFeature()
             {
