@@ -16,8 +16,10 @@ namespace BusinessLayer.Mapping
 
                 return profile;
             }
-            
-           
+
+            public void lancerService()
+            {
+            }
             
             public void weightProfileFeature()
             {

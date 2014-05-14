@@ -33,8 +33,8 @@
     <Reference Include="DAL">
       <HintPath>..\..\DAL\DAL\bin\Debug\DAL.dll</HintPath>
     </Reference>
-    <Reference Include="STGMSG">
-      <HintPath>..\..\STGMSG\STGMSG\bin\Debug\STGMSG.dll</HintPath>
+    <Reference Include="StgMsg">
+      <HintPath>..\..\StgMsg\StgMsg\bin\Debug\StgMsg.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
