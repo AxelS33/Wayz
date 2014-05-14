@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BusinessLayer\BusinessLayer\BusinessLayer.csproj">
+      <Project>{fc57ed68-289f-4c98-9d9a-0cd3bbb9f27d}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\StgMsg\StgMsg\StgMsg.csproj">
       <Project>{d84e3a15-7048-45d6-9487-0a70eac10733}</Project>
       <Name>StgMsg</Name>
