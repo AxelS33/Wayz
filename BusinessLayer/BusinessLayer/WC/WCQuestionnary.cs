@@ -28,7 +28,12 @@ namespace BusinessLayer.WC
         }
 
 
+<<<<<<< HEAD
+
+        public void weightProfile(StgMsg.StgMsg oMsg)
+=======
         public void weightProfile( StgMsg.StgMsg oMsg)
+>>>>>>> 6569d5e954a4e084669c5d460b3e24ec0e204c13
         {
           
         }
