@@ -8,8 +8,6 @@ namespace BusinessLayer.Mapping
 {
     class BCComparison : abstractBC
     {
-        public override void lancerService()
-        {
-        }
+
     }
 }

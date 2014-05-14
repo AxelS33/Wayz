@@ -8,8 +8,6 @@ namespace BusinessLayer.Mapping
 {
     class BCSettings : abstractBC
     {
-        public override void lancerService()
-        {
-        }
+
     }
 }

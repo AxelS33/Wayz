@@ -8,6 +8,11 @@ namespace Services
 {
     public class WaysOriention : Services
     {
+        public WaysOriention()
+        {
+
+        }
+
         public override StgMsg.StgMsg launchServices(StgMsg.StgMsg msg)
         {
             foreach (string value in Enum.GetValues(typeof(Functionalities)))

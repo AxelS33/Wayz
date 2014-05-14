@@ -15,7 +15,7 @@ namespace BusinessLayer.Mapping
 
         public void addFeature(string featureName, int weight)
         {
-            this.listFeature.Add(new Feature(featureName, weight));
+            //this.listFeature.Add(new Feature(featureName, weight));
         }
 
         public Job(List<Feature> listFeature)

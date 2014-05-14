@@ -12,7 +12,7 @@ namespace BusinessLayer.WC
         private DAL.DAL dal;
 
         /*** défini un profil par défaut, et choisi la premiére question ***/
-        public STGMSG.STGMSG setProfile(STGMSG.STGMSG oMsg)
+        public StgMsg.StgMsg setProfile(StgMsg.StgMsg oMsg)
         {
             this.dal = new DAL.DAL();
             BCQuestionnary oQuestionnary = new BCQuestionnary();
@@ -22,22 +22,22 @@ namespace BusinessLayer.WC
             profile.nextQuestion = this.getNextQuestion(oMsg);
             object[] ArrayProfile = new object[1];
             ArrayProfile.SetValue(profile,0);
-            oMsg.setData(ArrayProfile);
+            oMsg.data = ArrayProfile;
 
             return oMsg;
         }
 
-        
 
-        public void weightProfile(STGMSG.STGMSG oMsg)
+
+        public void weightProfile(StgMsg.StgMsg oMsg)
         {
           
         }
 
         /*** appelle les fonction qui choisissent la prochaine question en fonction du poid des features du profil courant***/
-        public Question getNextQuestion(STGMSG.STGMSG oMsg)
+        public Question getNextQuestion(StgMsg.StgMsg oMsg)
         {
-            object[] ArrayProfile = oMsg.getData();
+            object[] ArrayProfile = oMsg.data;
             UserProfile profile = (UserProfile)ArrayProfile.GetValue(0);
             BCQuestionnary oQuestionnary = new BCQuestionnary();
             Question questionPicked = oQuestionnary.chooseQuestion(profile, this.dal);

@@ -8,6 +8,6 @@ namespace BusinessLayer.Mapping
 {
     abstract class abstractBC
     {
-      abstract public void lancerService();
+
     }
 }

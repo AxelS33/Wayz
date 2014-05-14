@@ -24,7 +24,7 @@ namespace BusinessLayer.Mapping
         public List<Question> getAllQuestions(DAL.IDAL dal)
         {
             List<Question> allQuestions = new List<Question>();
-            SqlDataReader questionReader = dal.getAllQuestions();
+            //SqlDataReader questionReader = dal.getAllQuestions();
             while (questionReader.Read())
             {
                 Question question = new Question();
@@ -45,7 +45,7 @@ namespace BusinessLayer.Mapping
 
         public List<Answer> getAnswers(DAL.IDAL dal)
         {
-            List<Answer> listAnswer = new List<Answer>;
+            List<Answer> listAnswer = new List<Answer>();
             SqlDataReader answerReader = dal.getAnswers(this.id);
             while (answerReader.Read())
             {

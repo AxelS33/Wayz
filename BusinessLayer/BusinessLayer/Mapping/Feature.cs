@@ -21,7 +21,7 @@ namespace BusinessLayer.Mapping
 
         public Feature getFeatureByID(DAL.IDAL dal)
         {
-          SqlDataReader featureReader =  dal.getFeatureByID(this.id);
+       //   SqlDataReader featureReader =  dal.getFeatureByID(this.id);
           this.name = (string)featureReader["nameFeature"];
 
           return this;

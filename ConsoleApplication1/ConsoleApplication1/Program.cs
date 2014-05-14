@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Mapping
+namespace ConsoleApplication1
 {
-    class BCEncrypt : abstractBC
+    class Program
     {
+        static void Main(string[] args)
+        {
 
+        }
     }
 }

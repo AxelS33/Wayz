@@ -8,6 +8,11 @@ namespace Services
 {
     public class WaysGame : Services
     {
+        public WaysGame()
+        {
+
+        }
+
         public override StgMsg.StgMsg launchServices(StgMsg.StgMsg msg)
         {
             return msg;

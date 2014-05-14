@@ -12,7 +12,7 @@ namespace WaysServices
     public interface IWayService1
     {
         [OperationContract]
-        public StgMsg.StgMsg checkSecurity(StgMsg.StgMsg msg);
+        StgMsg.StgMsg checkSecurity(StgMsg.StgMsg msg);
 
 
         // TODO: ajoutez vos opérations de service ici

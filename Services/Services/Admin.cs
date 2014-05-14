@@ -8,7 +8,11 @@ namespace Services
 {
     public class Admin : Services
     {
-        
+        public Admin()
+        {
+
+        }
+
         public override StgMsg.StgMsg launchServices(StgMsg.StgMsg msg)
         {
             return msg;
