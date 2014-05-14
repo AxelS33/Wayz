@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,10 +11,20 @@ namespace BusinessLayer.Mapping
     {
         private int id { get; set; }
         private string name { get; set; }
-        private int weight {get; set;}
+        public int weight {get; set;}
 
-        public Feature()
+
+        public Feature(int id)
         {
+            this.id = id;
+        }
+
+        public Feature getFeatureByID(DAL.IDAL dal)
+        {
+          SqlDataReader featureReader =  dal.getFeatureByID(this.id);
+          this.name = (string)featureReader["nameFeature"];
+
+          return this;
         }
 
         public Feature(string name)
@@ -21,11 +32,13 @@ namespace BusinessLayer.Mapping
             this.name = name;
         }
 
-        public Feature(string name, int weight)
+        public Feature(int id, string name, int weight)
         {
             this.name = name;
             this.weight = weight;
         }
 
+
+      
     }
 }

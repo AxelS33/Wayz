@@ -8,5 +8,8 @@ namespace BusinessLayer.Mapping
 {
     class BCEncrypt : abstractBC
     {
+        public override void lancerService()
+        {
+        }
     }
 }

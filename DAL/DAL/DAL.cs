@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,22 +10,49 @@ namespace DAL
 {
     public class DAL : IDAL
     {
-        private string sqlQuery;
-        private System.Data.OleDb.OleDbConnection connection;
-        private System.Data.OleDb.OleDbCommand command;
-        private System.Data.OleDb.OleDbDataAdapter dataAdapter;
-        private System.Data.DataSet dataSet;
+      
+        private string strConnection;
+        private SqlConnection connection;
+        private SqlCommand cmd;
+        
+        
+            public DAL()
+            {
+                this.initConn();
+            }
 
-        public DAL()
+
+        public void initConn()
         {
-            this.sqlQuery = "NC";
-            this.connection = new System.Data.OleDb.OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;" +
-            @"Data Source=C:\Users\utilisateur1\Documents\Visual Studio 2012\Projects\Prosit6\BDDcocktail.mdb");
-            this.command = new System.Data.OleDb.OleDbCommand();
-            this.dataAdapter = new System.Data.OleDb.OleDbDataAdapter();
+
+            try
+            {
+                this.strConnection = @"packet size=4096; user id=admin; data source = Francky-PC; persist security info=False; initial catalog=;password=admin";
+                this.connection = new SqlConnection(this.strConnection);
+            }
+            catch(Exception ConnectionFail)
+            {
+                throw ConnectionFail;
+            }
+         
+
         }
 
-        public System.Data.DataSet getRows(string sqlQuery, string rowsName)
+        public SqlDataReader getFeatures()
+        {
+            this.cmd = new SqlCommand();
+            this.cmd.Connection = this.connection;
+
+            this.cmd.CommandText = "getAllFeatures";
+            this.cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader reader = cmd.ExecuteReader();
+            return reader;
+            
+        }
+       
+      
+
+        /* public System.Data.DataSet getRows(string sqlQuery, string rowsName)
         {
             this.dataSet = new System.Data.DataSet();
             this.sqlQuery = sqlQuery;
@@ -42,6 +71,6 @@ namespace DAL
             this.connection.Open();
             this.command.ExecuteNonQuery();
             this.connection.Close();
-        }
+        }*/
     }
 }
