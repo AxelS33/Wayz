@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BAC">
-      <HintPath>..\..\BAC\BAC\bin\Debug\BAC.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,8 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="Services.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaysGame.cs" />
+    <Compile Include="WaysOriention.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BAC\BAC\BAC.csproj">
+      <Project>{71e981bc-06e0-4e7f-948b-a52e2567ac16}</Project>
+      <Name>BAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StgMsg\StgMsg\StgMsg.csproj">
+      <Project>{d84e3a15-7048-45d6-9487-0a70eac10733}</Project>
+      <Name>StgMsg</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

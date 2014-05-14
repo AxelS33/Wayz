@@ -12,15 +12,7 @@ namespace WaysServices
     public interface IWayService1
     {
         [OperationContract]
-        void login();
-        [OperationContract]
-        void playWaysGame();
-        [OperationContract]
-        void playWaysOrientation();
-        [OperationContract]
-        void manageQuestion();
-        [OperationContract]
-        void editScore();
+        public StgMsg.StgMsg checkSecurity(StgMsg.StgMsg msg);
 
 
         // TODO: ajoutez vos opérations de service ici

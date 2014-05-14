@@ -8,18 +8,20 @@ namespace StgMsg
 {
     public class StgMsg
     {
-        private string appName { get; set; } 
-        private string invoke { get; set; }
-        private string pSecurity { get; set; }
-        private bool statut { get; set; }
-        private string info { get; set; }
-        private object[] data { get; set; }
-        private string token { get; set; }
-        private string servName { get; set; }
+        public string appName { get; set; }
+        public string invoke { get; set; }
+        public string pSecurity { get; set; }
+        public bool statut { get; set; }
+        public string info { get; set; }
+        public object[] data { get; set; }
+        public string token { get; set; }
+        public string servName { get; set; }
+
+        public StgMsg()
+        {
+
+        }
 
     }
-    public StgMsg() 
-    {
-        
-    }
+
 }

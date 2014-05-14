@@ -8,5 +8,15 @@ namespace Services
 {
     public class Services
     {
+        protected BAC.BAC bac;
+
+        public virtual StgMsg.StgMsg launchServices(StgMsg.StgMsg msg)
+        {
+
+            return msg;
+           
+        }
     }
+
+
 }
