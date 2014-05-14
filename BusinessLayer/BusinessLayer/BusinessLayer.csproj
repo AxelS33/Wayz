@@ -30,12 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="DAL">
       <HintPath>..\..\DAL\DAL\bin\Debug\DAL.dll</HintPath>
     </Reference>
     <Reference Include="StgMsg">
       <HintPath>..\..\StgMsg\StgMsg\bin\Debug\StgMsg.dll</HintPath>
     </Reference>
+=======
+>>>>>>> e75f7f893008816ff571e6480ce2b3ed3a1ac3e1
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,7 +70,16 @@
     <Compile Include="WC\WCQuestionnary.cs" />
     <Compile Include="WC\WCSettings.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\DAL\DAL.csproj">
+      <Project>{af960bba-0c31-496e-8c46-e8952eee8d16}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StgMsg\StgMsg\StgMsg.csproj">
+      <Project>{d84e3a15-7048-45d6-9487-0a70eac10733}</Project>
+      <Name>StgMsg</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

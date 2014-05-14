@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAC", "..\BAC\BAC\BAC.cspro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\BusinessLayer\BusinessLayer\BusinessLayer.csproj", "{FC57ED68-289F-4C98-9D9A-0CD3BBB9F27D}"
 EndProject
+<<<<<<< HEAD
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL\DAL.csproj", "{AF960BBA-0C31-496E-8C46-E8952EEE8D16}"
+EndProject
+>>>>>>> e75f7f893008816ff571e6480ce2b3ed3a1ac3e1
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +42,13 @@ Global
 		{FC57ED68-289F-4C98-9D9A-0CD3BBB9F27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC57ED68-289F-4C98-9D9A-0CD3BBB9F27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC57ED68-289F-4C98-9D9A-0CD3BBB9F27D}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+=======
+		{AF960BBA-0C31-496E-8C46-E8952EEE8D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF960BBA-0C31-496E-8C46-E8952EEE8D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF960BBA-0C31-496E-8C46-E8952EEE8D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF960BBA-0C31-496E-8C46-E8952EEE8D16}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> e75f7f893008816ff571e6480ce2b3ed3a1ac3e1
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
