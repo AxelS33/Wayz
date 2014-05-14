@@ -1,0 +1,13 @@
+diff a/BAC/BAC/BAC.csproj.rej b/BAC/BAC/BAC.csproj.rej	(rejected hunks)
+@@ -1,11 +0,0 @@
+-diff a/BAC/BAC/BAC.csproj b/BAC/BAC/BAC.csproj	(rejected hunks)
+-@@ -37,6 +37,9 @@
+-     <Reference Include="Microsoft.CSharp" />
+-     <Reference Include="System.Data" />
+-     <Reference Include="System.Xml" />
+-+    <Reference Include="WC">
+-+      <HintPath>..\..\BusinessLayer\BusinessLayer\bin\Debug\WC.dll</HintPath>
+-+    </Reference>
+-   </ItemGroup>
+-   <ItemGroup>
+-     <Compile Include="BAC.cs" />
