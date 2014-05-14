@@ -33,6 +33,9 @@
     <Reference Include="DAL">
       <HintPath>..\..\DAL\DAL\bin\Debug\DAL.dll</HintPath>
     </Reference>
+    <Reference Include="STGMSG">
+      <HintPath>..\..\STGMSG\STGMSG\bin\Debug\STGMSG.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +58,7 @@
     <Compile Include="Mapping\Question.cs" />
     <Compile Include="Mapping\Questionnary.cs" />
     <Compile Include="Mapping\User.cs" />
+    <Compile Include="Mapping\UserProfile.cs" />
     <Compile Include="WC\IWC.cs" />
     <Compile Include="WC\WCComparison.cs" />
     <Compile Include="WC\WCEncrypt.cs" />

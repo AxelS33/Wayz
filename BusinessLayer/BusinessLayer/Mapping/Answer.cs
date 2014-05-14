@@ -8,9 +8,9 @@ namespace BusinessLayer.Mapping
 {
     class Answer
     {
-        private int id { get; set; }
-        private int weight { get; set; }
-        private string description { get; set; }
+        public int id { get; set; }
+        public int weight { get; set; }
+        public string description { get; set; }
        
     }
 }
