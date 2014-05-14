@@ -10,25 +10,44 @@ namespace WaysServices
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class WayService : IWayService1
     {
-     
-        public void login()
+        private Services.Services services;
+
+
+        public StgMsg.StgMsg checkSecurity(StgMsg.StgMsg msg)
         {
-        }
-       public void playWaysGame()
-        {
+            switch (msg.pSecurity)
+            {
+                case "qsdqsd":
+                    this.callServices(msg);
+                    break;
+                default:
+                    return msg;
+            }
+            return msg;
         }
 
-        public void playWaysOrientation()
+        private StgMsg.StgMsg callServices(StgMsg.StgMsg msg)
         {
+            switch (msg.servName)
+            {
+                case "Admin":
+                    this.services = new Services.Admin();
+                    this.services.launchServices(msg);
+                    break;
+                case "WaysGame":
+                    this.services = new Services.WaysGame();
+                    this.services.launchServices(msg);
+                    break;
+                case "WaysOriention":
+                    this.services = new Services.WaysOriention();
+                    this.services.launchServices(msg);
+                    break;
+                default:
+                    return msg;      
+            }
+            return msg;
         }
 
-       public void manageQuestion()
-        {
-        }
-
-        public void editScore()
-        {
-        }
-
+   
     }
 }

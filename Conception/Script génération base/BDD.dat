@@ -1,0 +1,238 @@
+/*==============================================================*/
+/* Nom de SGBD :  Microsoft SQL Server 2008                     */
+/* Date de création :  13/05/2014 15:04:36                      */
+/*==============================================================*/
+
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('ADMINISTRATOR')
+            and   type = 'U')
+   drop table ADMINISTRATOR
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('ANSWERS')
+            and   name  = 'GET_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index ANSWERS.GET_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('ANSWERS')
+            and   type = 'U')
+   drop table ANSWERS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('FEATURES')
+            and   type = 'U')
+   drop table FEATURES
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FEATUREWEIGHT')
+            and   name  = 'FEATUREWEIGHT2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FEATUREWEIGHT.FEATUREWEIGHT2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FEATUREWEIGHT')
+            and   name  = 'FEATUREWEIGHT_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FEATUREWEIGHT.FEATUREWEIGHT_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('FEATUREWEIGHT')
+            and   type = 'U')
+   drop table FEATUREWEIGHT
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PROFESSIONS')
+            and   type = 'U')
+   drop table PROFESSIONS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PROFILES')
+            and   type = 'U')
+   drop table PROFILES
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUESTIONS')
+            and   name  = 'POSSESS_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUESTIONS.POSSESS_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUESTIONS')
+            and   name  = 'HAVE_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUESTIONS.HAVE_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('QUESTIONS')
+            and   type = 'U')
+   drop table QUESTIONS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('TYPES')
+            and   type = 'U')
+   drop table TYPES
+go
+
+/*==============================================================*/
+/* Table : ADMINISTRATOR                                        */
+/*==============================================================*/
+create table ADMINISTRATOR (
+   IDADMIN              int                  not null,
+   ADMINNAME            text                 not null,
+   ADMINPASSWORD        text                 not null,
+   constraint PK_ADMINISTRATOR primary key nonclustered (IDADMIN)
+)
+go
+
+/*==============================================================*/
+/* Table : ANSWERS                                              */
+/*==============================================================*/
+create table ANSWERS (
+   IDANSWER             int                  not null,
+   IDQUESTION           int                  not null,
+   ANSWERDESCRIPTION    text                 not null,
+   ANSWERPOINTS         int                  not null,
+   constraint PK_ANSWERS primary key nonclustered (IDANSWER)
+)
+go
+
+/*==============================================================*/
+/* Index : GET_FK                                               */
+/*==============================================================*/
+create index GET_FK on ANSWERS (
+IDQUESTION ASC
+)
+go
+
+/*==============================================================*/
+/* Table : FEATURES                                             */
+/*==============================================================*/
+create table FEATURES (
+   IDFEATURE            int                  not null,
+   FEATURENAME          text                 not null,
+   constraint PK_FEATURES primary key nonclustered (IDFEATURE)
+)
+go
+
+/*==============================================================*/
+/* Table : FEATUREWEIGHT                                        */
+/*==============================================================*/
+create table FEATUREWEIGHT (
+   PRO_IDPROFESSION     int                  not null,
+   FEA_IDFEATURE        int                  not null,
+   IDFEATURE            int                  not null,
+   IDPROFESSION         int                  not null,
+   FEATUREWEIGHT        int                  not null,
+   constraint PK_FEATUREWEIGHT primary key (PRO_IDPROFESSION, FEA_IDFEATURE)
+)
+go
+
+/*==============================================================*/
+/* Index : FEATUREWEIGHT_FK                                     */
+/*==============================================================*/
+create index FEATUREWEIGHT_FK on FEATUREWEIGHT (
+PRO_IDPROFESSION ASC
+)
+go
+
+/*==============================================================*/
+/* Index : FEATUREWEIGHT2_FK                                    */
+/*==============================================================*/
+create index FEATUREWEIGHT2_FK on FEATUREWEIGHT (
+FEA_IDFEATURE ASC
+)
+go
+
+/*==============================================================*/
+/* Table : PROFESSIONS                                          */
+/*==============================================================*/
+create table PROFESSIONS (
+   IDPROFESSION         int                  not null,
+   PROFESSIONNAME       text                 not null,
+   PROFESSIONTEXT       text                 not null,
+   constraint PK_PROFESSIONS primary key nonclustered (IDPROFESSION)
+)
+go
+
+/*==============================================================*/
+/* Table : PROFILES                                             */
+/*==============================================================*/
+create table PROFILES (
+   IDPROFILE            int                  not null,
+   PROFILENAME          text                 not null,
+   PROFILESCORE         int                  null,
+   constraint PK_PROFILES primary key nonclustered (IDPROFILE)
+)
+go
+
+/*==============================================================*/
+/* Table : QUESTIONS                                            */
+/*==============================================================*/
+create table QUESTIONS (
+   IDQUESTION           int                  not null,
+   IDTYPE               int                  not null,
+   IDFEATURE            int                  not null,
+   QUESTIONDESCRIPTION  text                 not null,
+   QUESTIONORDER        int                  null,
+   constraint PK_QUESTIONS primary key nonclustered (IDQUESTION)
+)
+go
+
+/*==============================================================*/
+/* Index : HAVE_FK                                              */
+/*==============================================================*/
+create index HAVE_FK on QUESTIONS (
+IDFEATURE ASC
+)
+go
+
+/*==============================================================*/
+/* Index : POSSESS_FK                                           */
+/*==============================================================*/
+create index POSSESS_FK on QUESTIONS (
+IDTYPE ASC
+)
+go
+
+/*==============================================================*/
+/* Table : TYPES                                                */
+/*==============================================================*/
+create table TYPES (
+   IDTYPE               int                  not null,
+   TYPENAME             text                 not null,
+   constraint PK_TYPES primary key nonclustered (IDTYPE)
+)
+go
+

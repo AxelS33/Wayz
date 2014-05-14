@@ -43,6 +43,12 @@
     <Compile Include="Ibac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\StgMsg\StgMsg\StgMsg.csproj">
+      <Project>{d84e3a15-7048-45d6-9487-0a70eac10733}</Project>
+      <Name>StgMsg</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
